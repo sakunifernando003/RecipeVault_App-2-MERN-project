@@ -87,10 +87,12 @@ section{
   margin:2rem 0;
 }
 
-.bg svg{
+.bg svg {
   position: absolute;
   bottom: 0;
+  pointer-events: none;
 }
+
 
 .card-container{
   width: 80%;

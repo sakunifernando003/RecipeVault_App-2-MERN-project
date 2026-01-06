@@ -3,9 +3,13 @@ import foodRecipe from '../assets/food.webp'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import RecipeItems from '../components/RecipeItems'
+import { useNavigate } from 'react-router-dom'
 
-
+ 
 export default function Home () {
+    const navigate=useNavigate()
+
+
   return (
     <>
       
@@ -13,7 +17,7 @@ export default function Home () {
             <div className='left'>
                 <h1>Food Recipe</h1>
                 <h5>A simple and user-friendly food recipe app designed to make cooking stress-free and fun. Discover a variety of recipes with clear ingredients, easy step-by-step instructions, and quick preparation times, all in one place. Whether you’re a beginner or a late-night hunger survivor, this app helps you cook smarter, faster, and with confidence—because good food shouldn’t be complicated.</h5>
-                <button>share your recipe</button>
+                <button onClick={()=>navigate("/addRecipe")}>share your recipe</button>
             </div>
             <div className='right'>
                 <img src={foodRecipe} width="320px" height="300px"></img>
