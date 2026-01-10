@@ -1,7 +1,7 @@
 const Recipes = require("../models/recipeModel")
 const multer = require("multer")
 
-/* ================= MULTER CONFIG ================= */
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./public/images")
@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
-/* ================= CONTROLLERS ================= */
+
 
 const getRecipes = async (req, res) => {
   const recipes = await Recipes.find()
